@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html { scroll-behavior: smooth; }
+    body {
+        @apply font-sans antialiased text-ink-800 bg-paper-50;
+        background-image:
+            radial-gradient(at 90% -10%, rgba(246,198,61,0.10), transparent 45%),
+            radial-gradient(at -10% 110%, rgba(201,123,90,0.10), transparent 45%);
+        background-attachment: fixed;
+    }
+    h1, h2, h3, h4 { @apply font-display tracking-tight text-ink-900; }
+    ::selection { background: theme('colors.saffron.200'); color: theme('colors.ink.900'); }
+}
+
+@layer components {
+    .container-prose { @apply max-w-6xl mx-auto px-6 lg:px-10; }
+
+    .btn {
+        @apply inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md
+               text-sm font-medium transition-all duration-200
+               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-paper-50;
+    }
+    .btn-primary {
+        @apply btn bg-ink-900 text-paper-50 hover:bg-ink-800 focus:ring-ink-700
+               shadow-soft;
+    }
+    .btn-accent {
+        @apply btn bg-saffron-300 text-ink-900 hover:bg-saffron-400 focus:ring-saffron-500
+               shadow-soft;
+    }
+    .btn-ghost {
+        @apply btn bg-transparent text-ink-700 hover:bg-ink-100 focus:ring-ink-300;
+    }
+    .btn-outline {
+        @apply btn border border-ink-200 bg-paper-50 text-ink-800 hover:bg-paper-100
+               focus:ring-ink-300;
+    }
+    .btn-danger {
+        @apply btn bg-clay-500 text-paper-50 hover:bg-clay-600 focus:ring-clay-400 shadow-soft;
+    }
+
+    .card {
+        @apply bg-paper-50 border border-ink-100 rounded-lg shadow-edge;
+    }
+    .card-pad { @apply p-6; }
+
+    .input, .select, .textarea {
+        @apply block w-full rounded-md border-ink-200 bg-paper-50
+               text-ink-900 placeholder-ink-400
+               focus:border-ink-500 focus:ring-2 focus:ring-ink-200
+               shadow-sm sm:text-sm;
+    }
+    .label { @apply block text-sm font-medium text-ink-700 mb-1.5; }
+
+    .badge { @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium; }
+    .badge-ink     { @apply badge bg-ink-100 text-ink-800; }
+    .badge-saffron { @apply badge bg-saffron-100 text-saffron-700; }
+    .badge-clay    { @apply badge bg-clay-400/15 text-clay-600; }
+    .badge-green   { @apply badge bg-emerald-100 text-emerald-700; }
+
+    .table-academic {
+        @apply w-full text-left text-sm;
+    }
+    .table-academic thead th {
+        @apply px-4 py-3 font-display font-semibold text-ink-700
+               border-b border-ink-200 bg-paper-100/60;
+    }
+    .table-academic tbody td {
+        @apply px-4 py-3 border-b border-ink-100 text-ink-800;
+    }
+    .table-academic tbody tr:hover { @apply bg-paper-100/50; }
+
+    .nav-link {
+        @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm
+               text-ink-600 hover:text-ink-900 hover:bg-paper-100 transition-colors;
+    }
+    .nav-link.active {
+        @apply bg-ink-900 text-paper-50 hover:bg-ink-800 hover:text-paper-50;
+    }
+
+    .rule {
+        @apply border-t border-ink-200/70 my-6;
+    }
+    .small-caps {
+        @apply uppercase tracking-[0.18em] text-[11px] font-semibold text-ink-500;
+    }
+}
+
+/* Soft scrollbars */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(14,19,32,0.15); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(14,19,32,0.25); }
+
+/* Subtle entry animation for cards */
+@keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+.animate-rise { animation: rise 0.4s ease-out both; }
