@@ -68,7 +68,7 @@ Caractéristiques notables du schéma :
 
 ```bash
 # 1) Récupérer le projet
-git clone https://github.com/<votre-compte>/iEVAL.git
+git clone https://github.com/<anas bougria>/iEVAL.git
 cd iEVAL
 
 # 2) Installer les dépendances PHP
@@ -85,7 +85,7 @@ php artisan key:generate
 #    DB_DATABASE=ieval, DB_USERNAME, DB_PASSWORD…
 #    (ou DB_CONNECTION=sqlite + touch database/database.sqlite pour un test rapide)
 
-# 6) Créer les tables et insérer les données de démo
+# 6) Créer les tables et insérer les données 
 php artisan migrate --seed
 
 # 7) Compiler le frontend
@@ -99,7 +99,7 @@ php artisan serve
 
 ### Comptes de démonstration
 
-Tous les mots de passe sont `password`.
+Tous les mots de passe sont `********`.
 
 | Rôle | Email |
 |---|---|
@@ -218,9 +218,7 @@ php artisan route:clear
 ./vendor/bin/phpstan analyse       # Analyse statique (Larastan)
 php artisan test                   # Tests Pest
 
-# Frontend
-npm run dev                        # Hot-reload
-npm run build                      # Production
+
 ```
 
 ---
