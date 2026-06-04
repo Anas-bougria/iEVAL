@@ -3,7 +3,9 @@
 > Application web Laravel pour la création, la passation et l'évaluation de QCM en ligne, avec statistiques détaillées par étudiant et par chapitre.
 
 **Projet de fin d'études — BTS Ibn Sina, Kénitra**
-Filière : Développement des Applications Informatiques · Encadré par : **Hamid Alhaiane** (Professeur de Génie Logiciel)
+Filière : Développement des Applications Informatiques ·
+Encadré par : **Hamid Alhaiane** (Professeur de Génie Logiciel)
+Réalisé par :Anas Bougria et Abderrahmane Errachidi
 
 ---
 
