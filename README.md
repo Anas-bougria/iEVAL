@@ -22,11 +22,10 @@ iEVAL est un système centralisé qui répond à trois rôles distincts :
 ## ✦ Stack technique
 
 - **PHP 8.2+** · **Laravel 11**
-- **MySQL** (développement local) · **PostgreSQL** (production / Supabase)
+- **MySQL** (développement local) ·
 - **Tailwind CSS 3** + design system sur mesure (palette ink/paper/saffron/clay, typographies Fraunces + DM Sans)
 - **Alpine.js** pour l'interactivité (formulaires de questions dynamiques, timer de passation)
 - **Chart.js** pour les graphiques statistiques
-- **Vite** pour le bundling frontend
 - **Pest** / PHPUnit pour les tests · **Larastan** pour l'analyse statique · **Laravel Pint** pour le style de code
 
 ---
