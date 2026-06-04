@@ -61,7 +61,6 @@ Caractéristiques notables du schéma :
 
 - PHP 8.2 ou supérieur (`php -v`)
 - Composer 2.x (`composer --version`)
-- Node.js 18+ et npm
 - MySQL 8 (ou MariaDB 10.6+), ou SQLite pour un test rapide
 
 ### Étapes
